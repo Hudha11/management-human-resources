@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\PresenceController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PresenceDetailController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,5 @@ Route::delete('presence-detail/{id}', [PresenceDetailController::class, 'destroy
 // publik
 Route::get('absen/{slug}', [AbsenController::class, 'index'])->name('absen.index');
 Route::post('absen/save/{id}', [AbsenController::class, 'save'])->name('absen.save');
+
+Route::resource('employees', EmployeeController::class);
