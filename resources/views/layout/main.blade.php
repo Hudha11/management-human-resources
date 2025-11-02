@@ -24,7 +24,7 @@
                 </li>
             </div>
         </div>
-        </nav>
+    </nav>
 
     @yield('content')
 
